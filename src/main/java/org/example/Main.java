@@ -15,6 +15,7 @@ public class Main {
         System.out.println(max);
         System.out.println("-----------");
 
+        // Сортировка массива
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length-i-1; j++) {
                 if (array[j] > array[j+1]) {
@@ -24,10 +25,32 @@ public class Main {
                 }
             }
         }
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+
+        System.out.println("\n-----------");
+        array = new int[]{1,2,4,6,1,8,90,256, 17, 5,6};
+
+        // Сортировка массива со swap()
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length-i-1; j++) {
+                if (array[j] > array[j+1]) {
+                    swap(array, j, j+1);
+                }
+            }
+        }
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+            System.out.print(array[i] + " ");
         }
+        System.out.println();
+    }
+
+    private static void swap(int[] array, int a, int b){
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
     }
 }
 
