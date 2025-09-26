@@ -31,6 +31,11 @@ public class ListService {
         return this.list;
     }
 
+    public ListService deleteAll() {
+        this.list = new ArrayList<>();
+        return this;
+    }
+
 
     public List<String> getList() {
         return list;

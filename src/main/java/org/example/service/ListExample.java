@@ -62,6 +62,8 @@ public class ListExample {
                 .of(fruits)
                 .getResult();
 
+        listStr.removeAll(listService.deleteAll().of("fff").of("aaa").of("bbb").getResult());
+
         System.out.println(resultStrings);
 
         // Частеы МЕТОДЫ LIST: add, size, remove, isEmpty, contains,toArray, containsAll, addAll,
